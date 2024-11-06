@@ -13,14 +13,20 @@ WebP is a modern image format that provides superior compression, saving on file
 
 ## Demo
 
+### Quality comparison
+
+Below is a top-to-bottom comparison, with the original image at the top and the compressed version at the bottom.
+
+#### Low Quality Setting(quality = 5)
+
 <a href="./docs/assets/quality-5.png?raw=true">
-  <img src="./docs/assets/quality-5.png" width="49%">
+  <img src="./docs/assets/quality-5.png" width="300">
 </a>
-<a href="./docs/assets/quality-40.png?raw=true">
- <img src="./docs/assets/quality-40.png" width="49%">
-</a>
+
+#### High Quality Settings(quality = 80)
+
 <a href="./docs/assets/quality-80.png?raw=true">
- <img src="./docs/assets/quality-80.png" width="49%">
+ <img src="./docs/assets/quality-80.png" width="300">
 </a>
 
 ## Installation
