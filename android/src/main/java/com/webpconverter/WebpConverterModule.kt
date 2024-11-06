@@ -21,19 +21,19 @@ class WebpConverterModule internal constructor(context: ReactApplicationContext)
 
   @ReactMethod
   override fun convertImageToWebp(
-    inputPath: String?,
-    outputPath: String?,
+    inputPath: String,
+    outputPath: String,
     quality: Double,
     type: Double,
     preset: Double,
-    promise: Promise?
+    promise: Promise
   ) {
 
     CoroutineScope(Dispatchers.IO).launch {
       val bitmap = BitmapFactory.decodeFile(inputPath)
 
       if (bitmap == null) {
-        promise?.reject("Error", "Could not load from $inputPath")
+        promise.reject("Error", "Could not load from $inputPath")
         return@launch
       }
 
@@ -49,10 +49,10 @@ class WebpConverterModule internal constructor(context: ReactApplicationContext)
             bitmap.compress(Bitmap.CompressFormat.WEBP, quality.toInt(), outputStream)
           }
 
-          promise?.resolve(outputPath)
+          promise.resolve(outputPath)
         }
       } catch (e: IOException) {
-        promise?.reject("Error", e.message)
+        promise.reject("Error", e.message)
       }
     }
   }
