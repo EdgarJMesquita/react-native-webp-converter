@@ -13,10 +13,14 @@ WebP is a modern image format that provides superior compression, saving on file
 
 ## Demo
 
-<a href="https://github.com/EdgarJMesquita/react-native-webp-converter">
-<img src="./docs/assets/quality-5.png" width="32%">
-<img src="./docs/assets/quality-40.png" width="32%">
-<img src="./docs/assets/quality-80.png" width="32%">
+<a href="./docs/assets/quality-5.png">
+  <img src="./docs/assets/quality-5.png" width="32%">
+</a>
+<a href="./docs/assets/quality-40.png">
+ <img src="./docs/assets/quality-40.png" width="32%">
+</a>
+<a href="./docs/assets/quality-80.png">
+ <img src="./docs/assets/quality-80.png" width="32%">
 </a>
 
 ## Installation
@@ -180,7 +184,7 @@ const config: WebP.WebPConfig = {
 Defines the configuration for image conversion.
 
 ```ts
-export type WebPConfig = {
+type WebPConfig = {
   quality: number; // Compression quality (0-100)
   type: Type; // Compression type: LOSSY or LOSSLESS
   preset?: Preset; // iOS only: image type preset, e.g., PICTURE, ICON
@@ -212,7 +216,7 @@ export type WebPConfig = {
 Compression types for image conversion.
 
 ```ts
-export enum Type {
+enum Type {
   LOSSY = 1,
   LOSSLESS = 2,
 }
@@ -223,7 +227,7 @@ export enum Type {
 Specifies the compression preset based on image type.
 
 ```ts
-export enum Preset {
+enum Preset {
   DEFAULT = 0, // Default preset
   PICTURE = 1, // Portrait or indoor shots
   PHOTO = 2, // Outdoor, natural photos
@@ -242,5 +246,3 @@ To contribute, see the [contributing guide](CONTRIBUTING.md) for setup and pull 
 Licensed under the MIT License.
 
 ---
-
-This comprehensive README should help developers understand the library and easily integrate it into their React Native projects.

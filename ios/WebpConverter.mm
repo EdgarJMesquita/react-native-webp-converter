@@ -17,7 +17,7 @@ RCT_EXPORT_METHOD(convertImageToWebp:(NSString *)inputPath
                       reject:(RCTPromiseRejectBlock)reject)
 {
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         // Load the input image
         UIImage *inputImage = [UIImage imageWithContentsOfFile:inputPath];
         if (!inputImage) {
