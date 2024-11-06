@@ -1,6 +1,6 @@
 {
   "name": "react-native-webp-converter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert PNG and JPG to WebP",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -48,6 +48,10 @@
     "open:android": "open -a \"Android Studio\" example/android"
   },
   "keywords": [
+    "WebP",
+    "image webp",
+    "image converter",
+    "webpconverter",
     "react-native",
     "ios",
     "android"
