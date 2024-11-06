@@ -27,7 +27,7 @@ const WebpConverter = WebpConverterModule
 function validateArgs(
   inputPath: string,
   outputPath: string,
-  config: WebpConfig
+  config: WebPConfig
 ) {
   if (!inputPath) {
     throw new Error(`Incorrect inputPath, received: ${inputPath}`);
@@ -66,7 +66,7 @@ function validateArgs(
  * @param inputPath string
  * @param outputPath string
  * @param config `WebPConfig`
- * @returns void
+ * @returns Promise<string>
  *
  * @example
  * ```ts
@@ -87,7 +87,7 @@ function validateArgs(
 export function convertImage(
   inputPath: string,
   outputPath: string,
-  config: WebpConfig
+  config: WebPConfig
 ): Promise<string> {
   validateArgs(inputPath, outputPath, config);
 
@@ -106,7 +106,7 @@ export function convertImage(
 
 export { useConverter } from './hooks';
 
-export type WebpConfig = {
+export type WebPConfig = {
   /**
    * Defines the quality level for WebP compression.
    *

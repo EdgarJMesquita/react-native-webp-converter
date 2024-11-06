@@ -1,17 +1,25 @@
 # react-native-webp-converter
 
-Easily convert PNG and JPG images to WebP format for better image optimization and performance in React Native applications.
+Easily convert PNG and JPG images to WebP format for improved image optimization and performance in React Native applications.
+
+WebP is a modern image format that provides superior compression, saving on file size without compromising quality, making it ideal for mobile apps where performance and storage are key.
 
 ## Features
 
-- Supports **PNG** and **JPG** to **WebP** conversion.
-- Offers a custom hook `useConverter()` for easy image conversion within components.
-- Provides a direct `convertImage()` method for flexibility in use.
-- Configurable **quality**, **type** (lossy or lossless), and **preset** options.
+- **PNG/JPG to WebP** conversion.
+- Custom hook `useConverter()` for easy in-component conversion.
+- `convertImage()` method for more controlled use cases.
+- Configurable options for **quality**, **type** (lossy/lossless), and **preset**.
+
+## Demo
+
+<a href="https://github.com/EdgarJMesquita/react-native-webp-converter">
+<img src="./docs/assets/quality-5.png" width="32%">
+<img src="./docs/assets/quality-40.png" width="32%">
+<img src="./docs/assets/quality-80.png" width="32%">
+</a>
 
 ## Installation
-
-Install the library using either `npm` or `yarn`:
 
 ```sh
 npm install react-native-webp-converter
@@ -25,28 +33,9 @@ yarn add react-native-webp-converter
 
 ## Usage
 
-### Using the `useConverter` Hook
-
-The `useConverter` hook allows you to convert an image file easily and handle loading/error states within your component.
-
-```tsx
-import * as WebP from 'react-native-webp-converter';
-import { StyleSheet, Image, ActivityIndicator, Text } from 'react-native';
-
-export default function App() {
-  const image = WebP.useConverter('my-local-image.png');
-
-  if (image.isLoading) return <ActivityIndicator />;
-
-  if (image.error) return <Text>{image.error?.message}</Text>;
-
-  return <Image style={StyleSheet.absoluteFill} source={{ uri: image.uri! }} />;
-}
-```
-
 ### Using `convertImage` Directly
 
-For more customized scenarios, such as downloading an image first or managing paths manually, use `convertImage`.
+For customized use cases, such as downloading an image first or managing paths manually, use `convertImage`.
 
 ```ts
 import * as WebP from 'react-native-webp-converter'
@@ -58,11 +47,9 @@ export default function App() {
   const [convertedImage, setConvertedImage] = useState('');
 
   const convertImage = useCallback(async () => {
-
     const inputPath = `path-to-my-local-image.png`;
     const outputPath = `${fs.CachesDirectoryPath}/my-image-converted.webp`;
 
-    // Actually convert the image with desired configuration
     await WebP.convertImage(inputPath, outputPath, {
       quality: 80,
       type: WebP.Type.LOSSY,
@@ -88,54 +75,172 @@ export default function App() {
 }
 ```
 
+### Using the `useConverter` Hook
+
+The `useConverter` hook converts images in your React Native component and handles loading/error states.
+
+#### 1. Automatic Conversion on Mount
+
+```tsx
+import * as WebP from 'react-native-webp-converter';
+import { StyleSheet, Image, ActivityIndicator, Text } from 'react-native';
+
+export default function App() {
+  const image = WebP.useConverter('my-local-image.png');
+
+  if (image.isLoading) return <ActivityIndicator />;
+
+  if (image.error) return <Text>{image.error?.message}</Text>;
+
+  return (
+    <Image
+      style={StyleSheet.absoluteFill}
+      source={{ uri: `file://${image.uri}` }}
+    />
+  );
+}
+```
+
+#### 2. Manual Conversion with `convert()`
+
+```tsx
+import * as WebP from 'react-native-webp-converter';
+import { StyleSheet, Image, ActivityIndicator, Text } from 'react-native';
+import { useEffect } from 'react';
+
+export default function App() {
+  const image = WebP.useConverter();
+
+  useEffect(() => {
+    image.convert('my-local-image.png');
+  }, []);
+
+  if (image.isLoading) return <ActivityIndicator />;
+  if (image.error) return <Text>{image.error?.message}</Text>;
+
+  return (
+    <Image
+      style={StyleSheet.absoluteFill}
+      source={{ uri: `file://${image.uri}` }}
+    />
+  );
+}
+```
+
 ## Configuration Options
 
-| Property  | Type          | Default               | Description                                                                                                    |
-| --------- | ------------- | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `quality` | `number`      | `80`                  | Sets the compression quality for the WebP image (0-100).                                                       |
-| `type`    | `WebP.Type`   | `WebP.Type.LOSSY`     | Sets the compression type: `LOSSY` or `LOSSLESS`.                                                              |
-| `preset`  | `WebP.Preset` | `WebP.Preset.DEFAULT` | iOS only. Sets the encoding preset for optimizing specific types of images, like `PICTURE`, `ICON`, or `TEXT`. |
+| Property  | Type          | Default               | Description                                                                         |
+| --------- | ------------- | --------------------- | ----------------------------------------------------------------------------------- |
+| `quality` | `number`      | `80`                  | Compression quality for the WebP image (0-100).                                     |
+| `type`    | `WebP.Type`   | `WebP.Type.LOSSY`     | Compression type: `LOSSY` or `LOSSLESS`.                                            |
+| `preset`  | `WebP.Preset` | `WebP.Preset.DEFAULT` | iOS only. Sets encoding preset based on image type: `PICTURE`, `ICON`, `TEXT`, etc. |
 
 ## API
 
-### `useConverter(inputPath: string, config?: WebPConfig)`
+```tsx
+import * as WebP from 'react-native-webp-converter';
+```
 
-A hook to convert images directly in your React component.
+### Methods
 
-- **`inputPath`**: The path to the input image file.
-- **`config`**: Optional configuration for quality, type, and preset.
-- Returns an object with properties:
-  - **`isLoading`**: `boolean`, `true` while the conversion is in progress.
-  - **`error`**: `any`, any error that occurred during conversion.
-  - **`uri`**: `string | null`, the output path of the converted image.
+#### `convertImage(inputPath: string, outputPath: string, config: WebPConfig): Promise<string>`
 
-### `convertImage(inputPath: string, outputPath: string, config: WebPConfig): Promise<string>`
+Converts an image to WebP format.
 
-A function to manually handle image conversion.
-
-- **`inputPath`**: The path to the input image file.
+- **`inputPath`**: Path to the input image file.
 - **`outputPath`**: Desired path for the output WebP file.
 - **`config`**: Configuration options.
 - **Returns**: `Promise<string>` resolving to the output path of the converted image.
 
+### Hooks
+
+#### `useConverter(inputPathOnMount?: string, configOnMount?: WebPConfig)`
+
+This hook converts images within a React Native component and returns:
+
+- **`uri`**: `string | null` - The path of the converted image.
+- **`error`**: `any` - Any error encountered during conversion.
+- **`isLoading`**: `boolean` - Indicates if conversion is in progress.
+- **`convert`**: `(inputPath: string, config: WebPConfig)=>Promise<void>` - Manually trigger conversion.
+
 ### Example Config Object
 
 ```ts
-const config: WebP.WebpConfig = {
+const config: WebP.WebPConfig = {
   quality: 80,
   type: WebP.Type.LOSSY,
   preset: WebP.Preset.PICTURE,
 };
 ```
 
+## Interfaces
+
+### `WebPConfig`
+
+Defines the configuration for image conversion.
+
+```ts
+export type WebPConfig = {
+  quality: number; // Compression quality (0-100)
+  type: Type; // Compression type: LOSSY or LOSSLESS
+  preset?: Preset; // iOS only: image type preset, e.g., PICTURE, ICON
+};
+```
+
+- **`quality`** (`number`): Defines the compression quality.
+
+  - **Lossy**: Represents visual quality; higher values produce better quality.
+  - **Lossless**: Indicates compression efficiency; higher values result in smaller files.
+
+- **`type`** (`Type`): Sets compression type:
+
+  - **`Type.LOSSY`** - Lossy compression.
+  - **`Type.LOSSLESS`** - Lossless compression.
+
+- **`preset`** (`Preset`, optional, iOS only): Adjusts compression settings based on image type:
+  - **`Preset.DEFAULT`**: Standard preset.
+  - **`Preset.PICTURE`**: Ideal for portraits or indoor shots.
+  - **`Preset.PHOTO`**: Best for natural outdoor photography.
+  - **`Preset.DRAWING`**: Suited for line art or drawings.
+  - **`Preset.ICON`**: For small, colorful icons.
+  - **`Preset.TEXT`**: For images containing text.
+
+### Enums
+
+#### `Type`
+
+Compression types for image conversion.
+
+```ts
+export enum Type {
+  LOSSY = 1,
+  LOSSLESS = 2,
+}
+```
+
+#### `Preset`
+
+Specifies the compression preset based on image type.
+
+```ts
+export enum Preset {
+  DEFAULT = 0, // Default preset
+  PICTURE = 1, // Portrait or indoor shots
+  PHOTO = 2, // Outdoor, natural photos
+  DRAWING = 3, // Drawings or high-contrast images
+  ICON = 4, // Small, colorful images (icons)
+  TEXT = 5, // Text-like images
+}
+```
+
 ## Contributing
 
-If you'd like to contribute to this project, please see the [contributing guide](CONTRIBUTING.md) for instructions on setting up the repository, coding standards, and submitting pull requests.
+To contribute, see the [contributing guide](CONTRIBUTING.md) for setup and pull request guidelines.
 
 ## License
 
-This project is licensed under the MIT License.
+Licensed under the MIT License.
 
 ---
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+This comprehensive README should help developers understand the library and easily integrate it into their React Native projects.

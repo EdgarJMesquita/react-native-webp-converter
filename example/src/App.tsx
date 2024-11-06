@@ -24,10 +24,11 @@ export default function App() {
     index: number
   ): Promise<Sample | null> {
     try {
-      const toFile = `${fs.CachesDirectoryPath}/original-${index + 1}.png`;
+      const toFile = `${fs.CachesDirectoryPath}/original.png`;
 
       await fs.downloadFile({
-        fromUrl: 'https://github.com/EdgarJMesquita.png',
+        fromUrl:
+          'https://cdn.holidayguru.es/wp-content/uploads/2016/08/Aerial-view-of-Christ-Sugarloaf-Rio-de-Janeiro-Brazil-iStock_55264880_LARGE-EDITORIAL-ONLY-dolphinphoto-2.jpg',
         toFile,
       }).promise;
 
@@ -76,7 +77,7 @@ export default function App() {
   }, []);
 
   const height = Dimensions.get('window').height / 2;
-  const width = Dimensions.get('window').width * 0.95;
+  const width = Dimensions.get('window').width;
 
   if (!samples.length) {
     return (
