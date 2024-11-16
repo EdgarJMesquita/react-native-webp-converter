@@ -28,7 +28,7 @@ export default function App() {
 
       await fs.downloadFile({
         fromUrl:
-          'https://cdn.holidayguru.es/wp-content/uploads/2016/08/Aerial-view-of-Christ-Sugarloaf-Rio-de-Janeiro-Brazil-iStock_55264880_LARGE-EDITORIAL-ONLY-dolphinphoto-2.jpg',
+          'https://raw.githubusercontent.com/EdgarJMesquita/react-native-webp-converter/refs/heads/main/docs/assets/original-5.png',
         toFile,
       }).promise;
 

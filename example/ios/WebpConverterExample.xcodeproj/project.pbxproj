@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2F4C7DC1D5C218CF851C0061 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */; };
+		5797A00E2F8ECCEC4CEC9FB7 /* libPods-WebpConverterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */; };
 		605EE3B04D3A384DD2511B2F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		7AE120A67DBB73E1F683F65D /* libPods-WebpConverterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E125AFD644589C443EB1F1B9 /* libPods-WebpConverterExample.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D3CFCA81720DD4408953C9A6 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DE6342529398276F05414A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 		00E356EE1AD99517003FC87E /* WebpConverterExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebpConverterExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WebpConverterExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebpConverterExampleTests.m; sourceTree = "<group>"; };
-		1246F10B8EF36FC34174CA16 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WebpConverterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebpConverterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WebpConverterExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WebpConverterExample/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,12 +39,12 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WebpConverterExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WebpConverterExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WebpConverterExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample-WebpConverterExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WebpConverterExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93B9F4F382B89AD78E763DB3 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B8B35C97D1B80AB401C7AE9B /* Pods-WebpConverterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.release.xcconfig"; sourceTree = "<group>"; };
-		B9DE6342529398276F05414A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample-WebpConverterExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14B7A9A001153F4B4C95C82 /* Pods-WebpConverterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.debug.xcconfig"; sourceTree = "<group>"; };
-		E125AFD644589C443EB1F1B9 /* libPods-WebpConverterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CFCA81720DD4408953C9A6 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */,
+				2F4C7DC1D5C218CF851C0061 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AE120A67DBB73E1F683F65D /* libPods-WebpConverterExample.a in Frameworks */,
+				5797A00E2F8ECCEC4CEC9FB7 /* libPods-WebpConverterExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E125AFD644589C443EB1F1B9 /* libPods-WebpConverterExample.a */,
-				B9DE6342529398276F05414A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */,
+				B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */,
+				7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,10 +143,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D14B7A9A001153F4B4C95C82 /* Pods-WebpConverterExample.debug.xcconfig */,
-				B8B35C97D1B80AB401C7AE9B /* Pods-WebpConverterExample.release.xcconfig */,
-				1246F10B8EF36FC34174CA16 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */,
-				93B9F4F382B89AD78E763DB3 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */,
+				B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */,
+				0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */,
+				8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */,
+				30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,12 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WebpConverterExampleTests" */;
 			buildPhases = (
-				2EF2A6F96AB9A1A0FF817B68 /* [CP] Check Pods Manifest.lock */,
+				2D819F0D69AF3FFF8E9062CB /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				851A74CE46A327D9469EF754 /* [CP] Embed Pods Frameworks */,
-				8D6A299922ADF5DBE4A10D29 /* [CP] Copy Pods Resources */,
+				788E55A7F605274A879054F9 /* [CP] Embed Pods Frameworks */,
+				18143AE42F4ACAB30181C6B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,13 +179,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WebpConverterExample" */;
 			buildPhases = (
-				899DFCEF6E85095C10EFDA65 /* [CP] Check Pods Manifest.lock */,
+				5F253E5ECFB41D3966B2F018 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				E7E7916F3E8F1D99677F6CD2 /* [CP] Embed Pods Frameworks */,
-				A4C6F5B056365E23EFFCD0F5 /* [CP] Copy Pods Resources */,
+				47E8678EBD2C199BA2E50AD1 /* [CP] Embed Pods Frameworks */,
+				C2F60C0A7EAC5A98CC2C178C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,7 +269,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		2EF2A6F96AB9A1A0FF817B68 /* [CP] Check Pods Manifest.lock */ = {
+		18143AE42F4ACAB30181C6B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D819F0D69AF3FFF8E9062CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,24 +308,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		851A74CE46A327D9469EF754 /* [CP] Embed Pods Frameworks */ = {
+		47E8678EBD2C199BA2E50AD1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		899DFCEF6E85095C10EFDA65 /* [CP] Check Pods Manifest.lock */ = {
+		5F253E5ECFB41D3966B2F018 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,24 +347,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D6A299922ADF5DBE4A10D29 /* [CP] Copy Pods Resources */ = {
+		788E55A7F605274A879054F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4C6F5B056365E23EFFCD0F5 /* [CP] Copy Pods Resources */ = {
+		C2F60C0A7EAC5A98CC2C178C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,23 +379,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7E7916F3E8F1D99677F6CD2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +414,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1246F10B8EF36FC34174CA16 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -441,7 +441,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93B9F4F382B89AD78E763DB3 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */;
+			baseConfigurationReference = 30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -465,7 +465,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D14B7A9A001153F4B4C95C82 /* Pods-WebpConverterExample.debug.xcconfig */;
+			baseConfigurationReference = B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -493,7 +493,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8B35C97D1B80AB401C7AE9B /* Pods-WebpConverterExample.release.xcconfig */;
+			baseConfigurationReference = 0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

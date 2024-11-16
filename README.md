@@ -43,9 +43,7 @@ yarn add react-native-webp-converter
 
 ## Usage
 
-### Using `convertImage` Directly
-
-For customized use cases, such as downloading an image first or managing paths manually, use `convertImage`.
+### Using `convertImage`
 
 ```ts
 import * as WebP from 'react-native-webp-converter'
@@ -85,94 +83,6 @@ export default function App() {
 }
 ```
 
-### Using the `useConverter` Hook
-
-The `useConverter` hook converts images in your React Native component and handles loading/error states.
-
-#### 1. Automatic Conversion on Mount
-
-```tsx
-import * as WebP from 'react-native-webp-converter';
-import { StyleSheet, Image, ActivityIndicator, Text } from 'react-native';
-
-export default function App() {
-  const image = WebP.useConverter('my-local-image.png');
-
-  if (image.isLoading) return <ActivityIndicator />;
-
-  if (image.error) return <Text>{image.error?.message}</Text>;
-
-  return (
-    <Image
-      style={StyleSheet.absoluteFill}
-      source={{ uri: `file://${image.uri}` }}
-    />
-  );
-}
-```
-
-#### 2. Manual Conversion with `convert()`
-
-```tsx
-import * as WebP from 'react-native-webp-converter';
-import { StyleSheet, Image, ActivityIndicator, Text } from 'react-native';
-import { useEffect } from 'react';
-
-export default function App() {
-  const image = WebP.useConverter();
-
-  useEffect(() => {
-    image.convert('my-local-image.png');
-  }, []);
-
-  if (image.isLoading) return <ActivityIndicator />;
-  if (image.error) return <Text>{image.error?.message}</Text>;
-
-  return (
-    <Image
-      style={StyleSheet.absoluteFill}
-      source={{ uri: `file://${image.uri}` }}
-    />
-  );
-}
-```
-
-## Configuration Options
-
-| Property  | Type          | Default               | Description                                                                         |
-| --------- | ------------- | --------------------- | ----------------------------------------------------------------------------------- |
-| `quality` | `number`      | `80`                  | Compression quality for the WebP image (0-100).                                     |
-| `type`    | `WebP.Type`   | `WebP.Type.LOSSY`     | Compression type: `LOSSY` or `LOSSLESS`.                                            |
-| `preset`  | `WebP.Preset` | `WebP.Preset.DEFAULT` | iOS only. Sets encoding preset based on image type: `PICTURE`, `ICON`, `TEXT`, etc. |
-
-## API
-
-```tsx
-import * as WebP from 'react-native-webp-converter';
-```
-
-### Methods
-
-#### `convertImage(inputPath: string, outputPath: string, config: WebPConfig): Promise<string>`
-
-Converts an image to WebP format.
-
-- **`inputPath`**: Path to the input image file.
-- **`outputPath`**: Desired path for the output WebP file.
-- **`config`**: Configuration options.
-- **Returns**: `Promise<string>` resolving to the output path of the converted image.
-
-### Hooks
-
-#### `useConverter(inputPathOnMount?: string, configOnMount?: WebPConfig)`
-
-This hook converts images within a React Native component and returns:
-
-- **`uri`**: `string | null` - The path of the converted image.
-- **`error`**: `any` - Any error encountered during conversion.
-- **`isLoading`**: `boolean` - Indicates if conversion is in progress.
-- **`convert`**: `(inputPath: string, config: WebPConfig)=>Promise<void>` - Manually trigger conversion.
-
 ### Example Config Object
 
 ```ts
@@ -183,6 +93,45 @@ const config: WebP.WebPConfig = {
 };
 ```
 
+## API
+
+```tsx
+import * as WebP from 'react-native-webp-converter';
+```
+
+### Methods
+
+#### `convertImage(inputPath, outputPath, config)`
+
+| **Argument** | **Type**          | **Description**                                     |
+| ------------ | ----------------- | --------------------------------------------------- |
+| `inputPath`  | `string`          | Path to the input image file.                       |
+| `outputPath` | `string`          | Desired path for the output WebP file.              |
+| `config`     | `WebPConfig`      | Configuration options.                              |
+| **Returns**  | `Promise<string>` | Resolves to the output path of the converted image. |
+
+---
+
+## Configuration Options
+
+| Property  | Type          | Required | Description                                                                            |
+| --------- | ------------- | -------- | -------------------------------------------------------------------------------------- |
+| `quality` | `number`      | Yes      | Defines the compression quality (0-100).                                               |
+|           |               |          | **Lossy**: Represents visual quality; higher values produce better quality.            |
+|           |               |          | **Lossless**: Indicates compression efficiency; higher values result in smaller files. |
+| `type`    | `WebP.Type`   | Yes      | Sets compression type.                                                                 |
+|           |               |          | **`Type.LOSSY`**: Lossy compression.                                                   |
+|           |               |          | **`Type.LOSSLESS`**: Lossless compression.                                             |
+| `preset`  | `WebP.Preset` | No       | Adjusts compression settings based on image type (iOS only).                           |
+|           |               |          | **`Preset.DEFAULT`**: Standard preset.                                                 |
+|           |               |          | **`Preset.PICTURE`**: Ideal for portraits or indoor shots.                             |
+|           |               |          | **`Preset.PHOTO`**: Best for natural outdoor photography.                              |
+|           |               |          | **`Preset.DRAWING`**: Suited for line art or drawings.                                 |
+|           |               |          | **`Preset.ICON`**: For small, colorful icons.                                          |
+|           |               |          | **`Preset.TEXT`**: For images containing text.                                         |
+
+---
+
 ## Interfaces
 
 ### `WebPConfig`
@@ -191,29 +140,11 @@ Defines the configuration for image conversion.
 
 ```ts
 type WebPConfig = {
-  quality: number; // Compression quality (0-100)
-  type: Type; // Compression type: LOSSY or LOSSLESS
-  preset?: Preset; // iOS only: image type preset, e.g., PICTURE, ICON
+  quality: number;
+  type: WebP.Type;
+  preset?: WebP.Preset;
 };
 ```
-
-- **`quality`** (`number`): Defines the compression quality.
-
-  - **Lossy**: Represents visual quality; higher values produce better quality.
-  - **Lossless**: Indicates compression efficiency; higher values result in smaller files.
-
-- **`type`** (`Type`): Sets compression type:
-
-  - **`Type.LOSSY`** - Lossy compression.
-  - **`Type.LOSSLESS`** - Lossless compression.
-
-- **`preset`** (`Preset`, optional, iOS only): Adjusts compression settings based on image type:
-  - **`Preset.DEFAULT`**: Standard preset.
-  - **`Preset.PICTURE`**: Ideal for portraits or indoor shots.
-  - **`Preset.PHOTO`**: Best for natural outdoor photography.
-  - **`Preset.DRAWING`**: Suited for line art or drawings.
-  - **`Preset.ICON`**: For small, colorful icons.
-  - **`Preset.TEXT`**: For images containing text.
 
 ### Enums
 
@@ -223,8 +154,8 @@ Compression types for image conversion.
 
 ```ts
 enum Type {
-  LOSSY = 1,
-  LOSSLESS = 2,
+  LOSSY,
+  LOSSLESS,
 }
 ```
 
@@ -234,12 +165,12 @@ Specifies the compression preset based on image type.
 
 ```ts
 enum Preset {
-  DEFAULT = 0, // Default preset
-  PICTURE = 1, // Portrait or indoor shots
-  PHOTO = 2, // Outdoor, natural photos
-  DRAWING = 3, // Drawings or high-contrast images
-  ICON = 4, // Small, colorful images (icons)
-  TEXT = 5, // Text-like images
+  DEFAULT, // Default preset
+  PICTURE, // Portrait or indoor shots
+  PHOTO, // Outdoor, natural photos
+  DRAWING, // Drawings or high-contrast images
+  ICON, // Small, colorful images (icons)
+  TEXT, // Text-like images
 }
 ```
 

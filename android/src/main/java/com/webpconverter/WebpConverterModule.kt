@@ -30,18 +30,22 @@ class WebpConverterModule internal constructor(context: ReactApplicationContext)
   ) {
 
     CoroutineScope(Dispatchers.IO).launch {
-      val bitmap = BitmapFactory.decodeFile(inputPath)
+      val inputFilePath = removeFileScheme(inputPath)
+      val outputFilePath = removeFileScheme(outputPath)
+
+
+      val bitmap = BitmapFactory.decodeFile(inputFilePath)
 
       if (bitmap == null) {
-        promise.reject("Error", "Could not load from $inputPath")
+        promise.reject("Error", "Could not load from $inputFilePath")
         return@launch
       }
 
       try {
-        FileOutputStream(outputPath).use { outputStream ->
+        FileOutputStream(outputFilePath).use { outputStream ->
           if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val selectedQuality =
-              if (type.toInt() == 1) Bitmap.CompressFormat.WEBP_LOSSY else Bitmap.CompressFormat.WEBP_LOSSLESS
+              if (type.toInt() == 0) Bitmap.CompressFormat.WEBP_LOSSY else Bitmap.CompressFormat.WEBP_LOSSLESS
 
             bitmap.compress(selectedQuality, quality.toInt(), outputStream)
 
@@ -49,12 +53,16 @@ class WebpConverterModule internal constructor(context: ReactApplicationContext)
             bitmap.compress(Bitmap.CompressFormat.WEBP, quality.toInt(), outputStream)
           }
 
-          promise.resolve(outputPath)
+          promise.resolve(outputFilePath)
         }
       } catch (e: IOException) {
         promise.reject("Error", e.message)
       }
     }
+  }
+
+  private fun removeFileScheme(path: String): String{
+      return path.removePrefix("file://")
   }
 
   companion object {

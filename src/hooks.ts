@@ -12,7 +12,7 @@ const defaultConfig: WebP.WebPConfig = {
  * @param inputPathOnMount (optional) Path to the input image for immediate conversion on mount
  * @param configOnMount Configuration settings for WebP conversion
  * @returns `{ uri, error, isLoading, convert }`
- *
+ * @deprecated
  * ### Example
  * ```tsx
  * import * as WebP from 'react-native-webp-converter';

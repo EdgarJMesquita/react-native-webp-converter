@@ -41,7 +41,7 @@ function validateArgs(
     throw new Error(`Incorrect config, received: ${config}`);
   }
 
-  if (config.type !== 1 && config.type !== 2) {
+  if (config.type !== Type.LOSSY && config.type !== Type.LOSSLESS) {
     throw new Error(`Incorrect config.type, received: ${config.type}`);
   }
 
@@ -55,7 +55,7 @@ function validateArgs(
 
   if (
     typeof config.preset === 'number' &&
-    (config.preset < 0 || config.preset > 5)
+    (config.preset < Preset.DEFAULT || config.preset > Preset.TEXT)
   ) {
     throw new Error(`Incorrect config.preset, received: ${config.preset}`);
   }
@@ -147,34 +147,34 @@ export type WebPConfig = {
 };
 
 export enum Type {
-  LOSSY = 1,
-  LOSSLESS = 2,
+  LOSSY,
+  LOSSLESS,
 }
 
 export enum Preset {
   /**
    * @description default preset
    */
-  DEFAULT = 0,
+  DEFAULT,
   /**
    * @description digital picture, like portrait, inner shot
    */
-  PICTURE = 1,
+  PICTURE,
   /**
    * @description outdoor photograph, with natural lighting
    */
-  PHOTO = 2,
+  PHOTO,
   /**
    * @description hand or line drawing, with high-contrast details
    */
-  DRAWING = 3,
+  DRAWING,
   /**
    * @description small-sized colorful images
    */
 
-  ICON = 4,
+  ICON,
   /**
    * @description text-like
    */
-  TEXT = 5,
+  TEXT,
 }
