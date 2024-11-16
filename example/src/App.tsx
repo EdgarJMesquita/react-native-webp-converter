@@ -28,7 +28,7 @@ export default function App() {
 
       await fs.downloadFile({
         fromUrl:
-          'https://raw.githubusercontent.com/EdgarJMesquita/react-native-webp-converter/refs/heads/main/docs/assets/original-5.png',
+          'https://raw.githubusercontent.com/EdgarJMesquita/react-native-webp-converter/refs/heads/main/docs/assets/original.png',
         toFile,
       }).promise;
 
