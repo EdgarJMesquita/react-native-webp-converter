@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Build
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 import kotlinx.coroutines.CoroutineScope
@@ -12,15 +13,15 @@ import kotlinx.coroutines.launch
 import java.io.FileOutputStream
 import java.io.IOException
 
-class WebpConverterModule internal constructor(context: ReactApplicationContext) :
-  WebpConverterSpec(context) {
+class WebpConverterModule(reactContext: ReactApplicationContext) :
+  ReactContextBaseJavaModule(reactContext) {
 
   override fun getName(): String {
     return NAME
   }
 
   @ReactMethod
-  override fun convertImageToWebp(
+  fun convertImageToWebp(
     inputPath: String,
     outputPath: String,
     quality: Double,

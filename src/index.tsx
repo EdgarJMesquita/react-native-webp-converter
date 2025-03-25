@@ -6,15 +6,8 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-// @ts-expect-error
-const isTurboModuleEnabled = global.__turboModuleProxy != null;
-
-const WebpConverterModule = isTurboModuleEnabled
-  ? require('./NativeWebpConverter').default
-  : NativeModules.WebpConverter;
-
-const WebpConverter = WebpConverterModule
-  ? WebpConverterModule
+const WebpConverter = NativeModules.WebpConverter
+  ? NativeModules.WebpConverter
   : new Proxy(
       {},
       {

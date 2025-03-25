@@ -1,35 +1,17 @@
 package com.webpconverter
 
-import com.facebook.react.TurboReactPackage
-import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
-import com.facebook.react.module.model.ReactModuleInfoProvider
-import com.facebook.react.module.model.ReactModuleInfo
-import java.util.HashMap
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.uimanager.ViewManager
 
-class WebpConverterPackage : TurboReactPackage() {
-  override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == WebpConverterModule.NAME) {
-      WebpConverterModule(reactContext)
-    } else {
-      null
-    }
+
+class WebpConverterPackage : ReactPackage {
+  override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
+    return listOf(WebpConverterModule(reactContext))
   }
 
-  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
-    return ReactModuleInfoProvider {
-      val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      val isTurboModule: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
-      moduleInfos[WebpConverterModule.NAME] = ReactModuleInfo(
-        WebpConverterModule.NAME,
-        WebpConverterModule.NAME,
-        false,  // canOverrideExistingModule
-        false,  // needsEagerInit
-        true,  // hasConstants
-        false,  // isCxxModule
-        isTurboModule // isTurboModule
-      )
-      moduleInfos
-    }
+  override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
+    return emptyList()
   }
 }

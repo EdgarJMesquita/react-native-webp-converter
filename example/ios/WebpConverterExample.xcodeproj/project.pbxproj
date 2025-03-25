@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2F4C7DC1D5C218CF851C0061 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */; };
-		5797A00E2F8ECCEC4CEC9FB7 /* libPods-WebpConverterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */; };
-		605EE3B04D3A384DD2511B2F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		39C14B5B15F82C56B491206B /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEE00CF4DE5AC664373A1BC /* libPods-WebpConverterExample-WebpConverterExampleTests.a */; };
+		7A8098D34C1A3DD0BDADC167 /* libPods-WebpConverterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A96C87FE735148E7E56C1E99 /* libPods-WebpConverterExample.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9D71B3F56C8DA68CD37D347E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 131B2101E969E6B4CC55A078 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 		00E356EE1AD99517003FC87E /* WebpConverterExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebpConverterExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WebpConverterExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebpConverterExampleTests.m; sourceTree = "<group>"; };
-		0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.release.xcconfig"; sourceTree = "<group>"; };
+		131B2101E969E6B4CC55A078 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = WebpConverterExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WebpConverterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebpConverterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WebpConverterExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WebpConverterExample/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,12 +39,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WebpConverterExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WebpConverterExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WebpConverterExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample-WebpConverterExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		299F596E79FE3DA0CEFEDE5F /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BEE00CF4DE5AC664373A1BC /* libPods-WebpConverterExample-WebpConverterExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample-WebpConverterExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WebpConverterExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.debug.xcconfig"; sourceTree = "<group>"; };
-		B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96C87FE735148E7E56C1E99 /* libPods-WebpConverterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebpConverterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B532A78B13AE1F65460E2137 /* Pods-WebpConverterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.debug.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C78EB340CE6DF91D08518F99 /* Pods-WebpConverterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample.release.xcconfig"; sourceTree = "<group>"; };
+		CD47BAACD4857C8FDFE04197 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; path = "Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4C7DC1D5C218CF851C0061 /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */,
+				39C14B5B15F82C56B491206B /* libPods-WebpConverterExample-WebpConverterExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5797A00E2F8ECCEC4CEC9FB7 /* libPods-WebpConverterExample.a in Frameworks */,
+				7A8098D34C1A3DD0BDADC167 /* libPods-WebpConverterExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +96,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				131B2101E969E6B4CC55A078 /* PrivacyInfo.xcprivacy */,
 			);
 			name = WebpConverterExample;
 			sourceTree = "<group>";
@@ -103,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B41D5F21A7FA33E774A8462E /* libPods-WebpConverterExample.a */,
-				7DE2A8F8A4CEA65B4509F28A /* libPods-WebpConverterExample-WebpConverterExampleTests.a */,
+				A96C87FE735148E7E56C1E99 /* libPods-WebpConverterExample.a */,
+				7BEE00CF4DE5AC664373A1BC /* libPods-WebpConverterExample-WebpConverterExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,10 +145,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */,
-				0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */,
-				8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */,
-				30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */,
+				B532A78B13AE1F65460E2137 /* Pods-WebpConverterExample.debug.xcconfig */,
+				C78EB340CE6DF91D08518F99 /* Pods-WebpConverterExample.release.xcconfig */,
+				299F596E79FE3DA0CEFEDE5F /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */,
+				CD47BAACD4857C8FDFE04197 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,12 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WebpConverterExampleTests" */;
 			buildPhases = (
-				2D819F0D69AF3FFF8E9062CB /* [CP] Check Pods Manifest.lock */,
+				0504290250F0888EACE22A77 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				788E55A7F605274A879054F9 /* [CP] Embed Pods Frameworks */,
-				18143AE42F4ACAB30181C6B1 /* [CP] Copy Pods Resources */,
+				CA945140B46F80D316094139 /* [CP] Embed Pods Frameworks */,
+				1552E0E87C5E46E455AEBBDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,13 +181,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WebpConverterExample" */;
 			buildPhases = (
-				5F253E5ECFB41D3966B2F018 /* [CP] Check Pods Manifest.lock */,
+				89F2EC865558AF71A756C5D7 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				47E8678EBD2C199BA2E50AD1 /* [CP] Embed Pods Frameworks */,
-				C2F60C0A7EAC5A98CC2C178C /* [CP] Copy Pods Resources */,
+				0104BA71A3B9118DACDC1805 /* [CP] Embed Pods Frameworks */,
+				E57CD3815854A173326859B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +248,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				605EE3B04D3A384DD2511B2F /* PrivacyInfo.xcprivacy in Resources */,
+				9D71B3F56C8DA68CD37D347E /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,24 +271,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		18143AE42F4ACAB30181C6B1 /* [CP] Copy Pods Resources */ = {
+		0104BA71A3B9118DACDC1805 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D819F0D69AF3FFF8E9062CB /* [CP] Check Pods Manifest.lock */ = {
+		0504290250F0888EACE22A77 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,24 +310,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47E8678EBD2C199BA2E50AD1 /* [CP] Embed Pods Frameworks */ = {
+		1552E0E87C5E46E455AEBBDB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample/Pods-WebpConverterExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F253E5ECFB41D3966B2F018 /* [CP] Check Pods Manifest.lock */ = {
+		89F2EC865558AF71A756C5D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +349,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		788E55A7F605274A879054F9 /* [CP] Embed Pods Frameworks */ = {
+		CA945140B46F80D316094139 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,7 +366,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebpConverterExample-WebpConverterExampleTests/Pods-WebpConverterExample-WebpConverterExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2F60C0A7EAC5A98CC2C178C /* [CP] Copy Pods Resources */ = {
+		E57CD3815854A173326859B6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +416,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C187607DDCDC90C860B2B36 /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 299F596E79FE3DA0CEFEDE5F /* Pods-WebpConverterExample-WebpConverterExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -422,7 +424,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = WebpConverterExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,12 +443,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30A867C3BF6007B5932C485D /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */;
+			baseConfigurationReference = CD47BAACD4857C8FDFE04197 /* Pods-WebpConverterExample-WebpConverterExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = WebpConverterExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,14 +467,13 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B00B56751B15E610401061F0 /* Pods-WebpConverterExample.debug.xcconfig */;
+			baseConfigurationReference = B532A78B13AE1F65460E2137 /* Pods-WebpConverterExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WebpConverterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,13 +494,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D9DF3174CA97ED762142350 /* Pods-WebpConverterExample.release.xcconfig */;
+			baseConfigurationReference = C78EB340CE6DF91D08518F99 /* Pods-WebpConverterExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = WebpConverterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -548,6 +549,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -566,7 +568,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -592,7 +596,6 @@
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				USE_HERMES = true;
 			};
 			name = Debug;
@@ -601,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -628,6 +632,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CXX = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -639,7 +644,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
